@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="w-100 vh-100 weaponWheelBody">
+        <div class="position-absolute d-flex justify-content-center align-items-center" style="top: 5%;left: 10%;right: 10%; gap: 3rem;" id="loadItemsDiv">
+        
+        </div>
+    
+        <div class="links" style="display: none;">
+            <ul class="links__list" style="--item-total:5">
+                <li class="links__item" style="--item-count:1">
+                <a class="links__link" href="#" onclick="loadItems('pistols')">
+                    <img src="images/pistol.svg" alt="" width="80px" height="80px">
+                    <span class="links__text">Pistols</span>
+                </a>
+                </li>
+                <li class="links__item" style="--item-count:2">
+                <a class="links__link" href="#" onclick="loadItems('automatics')">
+                    <img src="images/automatic.svg" alt="" width="100px" height="100px">
+                    <span class="links__text">Automatic</span>
+                </a>
+                </li>
+                <li class="links__item" style="--item-count:3">
+                <a class="links__link" href="#" onclick="loadItems('riffles')">
+                    <img src="images/riffle.svg" alt="" width="100px" height="100px">
+                    <span class="links__text">Riffles</span>
+                </a>
+                </li>
+                <li class="links__item" style="--item-count:4">
+                <a class="links__link" href="#" onclick="loadItems('melees')">
+                    <img src="images/knife.svg" alt="" width="100px" height="100px">
+                    <span class="links__text">Melees</span>
+                </a>
+                </li>
+                <li class="links__item" style="--item-count:5">
+                <a class="links__link" href="#" onclick="loadItems('tools')">
+                    <img src="images/tools.svg" alt="" width="80px" height="80px">
+                    <span class="links__text">Tools</span>
+                </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
