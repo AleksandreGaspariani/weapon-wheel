@@ -21,28 +21,28 @@ $(document).ready((e)=>{
 })
 
 let data = {
-    'pistols': [
+    'Pistols': [
         'colt python',
         'glock18',
         'desert eagle'
     ],
-    'automatics': [
+    'Automatics': [
         'm4a16',
         'ak-47',
         'ak-74',
         'ump-500',
     ],
-    'riffles': [
+    'Rifles': [
         'sanadiro',
         'kisti',
         'rujio',
     ],
-    'melees': [
+    'Melees': [
         'knife',
         'axe',
         'battle axe',
     ],
-    'tools': [
+    'Shotguns': [
         'shovel',
         'lockpick',
         'wrench',
@@ -65,13 +65,17 @@ function getGun(gun){
     console.log(gun); // აგი აგდებს იარაღის სახელს რომელზეც კლიკია
 }
 
+function receiveData(jsonData) {
+    data = JSON.parse(jsonData);
+}
+
 function loadItems(which){
 
     $('#loadItemsDiv').empty();
 
     switch (which) {
-        case 'pistols':
-            data.pistols.forEach(element => {
+        case 'Pistols':
+            data.Pistols.forEach(element => {
                 $('#loadItemsDiv').append(`
                     <div class="d-flex flex-column justify-content-end align-items-center each_item_top" onmouseenter="select(this)" onmouseleave="diselect(this)" onclick="getGun('`+element+`')">
                         <img src="images/pistol.svg" alt="" width="70px" height="70px">
@@ -80,8 +84,8 @@ function loadItems(which){
                 `);
             });
         break;
-        case 'automatics':
-            data.automatics.forEach(element => {
+        case 'Automatics':
+            data.Automatics.forEach(element => {
                 $('#loadItemsDiv').append(`
                     <div class="d-flex flex-column justify-content-end align-items-center each_item_top" onmouseenter="select(this)" onmouseleave="diselect(this)" onclick="getGun('`+element+`')">
                         <img src="images/automatic.svg" alt="" width="70px" height="70px">
@@ -90,8 +94,8 @@ function loadItems(which){
                 `);
             });
         break;
-        case 'riffles':
-            data.riffles.forEach(element => {
+        case 'Rifles':
+            data.Rifles.forEach(element => {
                 $('#loadItemsDiv').append(`
                     <div class="d-flex flex-column justify-content-end align-items-center each_item_top" onmouseenter="select(this)" onmouseleave="diselect(this)" onclick="getGun('`+element+`')">
                         <img src="images/riffle.svg" alt="" width="70px" height="70px">
@@ -100,8 +104,8 @@ function loadItems(which){
                 `);
             });
         break;
-        case 'melees':
-            data.melees.forEach(element => {
+        case 'Melees':
+            data.Melees.forEach(element => {
                 $('#loadItemsDiv').append(`
                     <div class="d-flex flex-column justify-content-end align-items-center each_item_top" onmouseenter="select(this)" onmouseleave="diselect(this)" onclick="getGun('`+element+`')">
                         <img src="images/knife.svg" alt="" width="70px" height="70px">
@@ -110,8 +114,8 @@ function loadItems(which){
                 `);
             });
         break;
-        case 'tools':
-            data.tools.forEach(element => {
+        case 'Shotguns':
+            data.Shotguns.forEach(element => {
                 $('#loadItemsDiv').append(`
                     <div class="d-flex flex-column justify-content-end align-items-center each_item_top" onmouseenter="select(this)" onmouseleave="diselect(this)" onclick="getGun('`+element+`')">
                         <img src="images/tools.svg" alt="" width="70px" height="70px">
