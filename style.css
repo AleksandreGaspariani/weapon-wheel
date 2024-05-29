@@ -55,7 +55,7 @@
   
   .links__link {
     opacity: 0;
-    animation: on-load .3s ease-in-out forwards;
+    animation: on-load .2s ease-in-out forwards;
     animation-delay: calc(var(--item-count)*150ms);
     width: 100%;
     height: 100%;
@@ -167,3 +167,5 @@
       transform: scale(1) translateY(calc(var(--base-grid)*5));
     }
   }
+
+  #loadItemsDiv{z-index: 10;}

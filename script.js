@@ -62,7 +62,8 @@ function diselect(element) {
 }
 
 function getGun(gun){
-    console.log(gun); // აგი აგდებს იარაღის სახელს რომელზეც კლიკია
+    //console.log(gun); // აგი აგდებს იარაღის სახელს რომელზეც კლიკია
+    mp.trigger('onWeaponWheelReq',gun);
 }
 
 function receiveData(jsonData) {
